@@ -1,0 +1,9 @@
+# .gitignore
+venv/
+.env
+__pycache__/
+node_modules/
+GeoLite2-City.mmdb
+*.json
+backend/cowrie/
+backend/cowrie/
