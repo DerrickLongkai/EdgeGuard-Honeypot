@@ -20,7 +20,7 @@ A full-stack, real-time threat intelligence dashboard designed to visualize SSH/
 4. **Frontend Dashboard:** React.js + Vite application utilizing `react-simple-maps` for interactive threat visualization.
 
 ## Dashboard Preview
-![EdgeGuard Dashboard](./docs/screenshot.png)
+![EdgeGuard Dashboard](./interface.jpg)
 
 ## How to start
 ### 1. Database Setup
