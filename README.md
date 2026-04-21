@@ -27,4 +27,34 @@ A full-stack, real-time threat intelligence dashboard designed to visualize SSH/
 Execute the SQL schema to initialize the `attacks` table:
 ```sql
 CREATE DATABASE edgeguard;
--- (Add your table creation SQL here)
+USE edgeguard;
+
+CREATE TABLE attacks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    src_ip VARCHAR(50) NOT NULL,
+    username VARCHAR(100),
+    password VARCHAR(255),
+    country VARCHAR(100),
+    city VARCHAR(100),
+    latitude DECIMAL(10, 6),
+    longitude DECIMAL(11, 6),
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 2. Backend Environment (Flask API)
+Navigate to the backend directory, set up the Python virtual environment, install dependencies, and start the server:
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 app.py
+```
+
+### 3. frontend Environment (React Dashboard)
+```bash
+cd frontend
+npm install --legacy-peer-deps
+npm run dev
+```
